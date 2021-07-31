@@ -9,7 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
@@ -20,7 +21,7 @@ jobs:
           hugo-version: "${{ steps.hugo-version.outputs.HUGO_VERSION }}"
 
       - name:
-          4. Set Timezone & Generate Public Files
+          Set Timezone & Generate Public Files
           # 设置时区为 UTC+8 否则生成网站的时间可能是世界协调时
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
