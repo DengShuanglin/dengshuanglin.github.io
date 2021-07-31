@@ -4,40 +4,26 @@ on:
   push:
     branches:
       - main
+
 jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
-          submodules: true
-          fetch-depth: 0
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "${{ steps.hugo-version.outputs.HUGO_VERSION }}"
-          extended: true
+          hugo-version: "0.79.1"
 
-      - name: 4. Set Timezone & Generate Public Files
-        # 设置时区为 UTC+8 否则生成网站的时间可能是世界协调时
-        run: |
-          sudo timedatectl set-timezone Asia/Shanghai
-          hugo --minify
+      - name: Build
+        run: hugo --minify
 
-      - name: Build Hugo
-        run: |
-          hugo
-
-      - name: Deploy Hugo to gh-pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          # external_repository: ${{ secrets.ACTIONS_DEPLOY_REPO }}
-          # exclude_assets: ""
-          # cname: ${{ secrets.ACTIONS_DEPLOY_CNAME }}
-          # commit_message: ${{ github.event.head_commit.message }}
-          # user_name: "github-actions[bot]"
-          # user_email: "github-actions[bot]@users.noreply.github.com"
