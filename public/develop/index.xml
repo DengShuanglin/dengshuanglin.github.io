@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Develops on 双林不是双休</title>
+    <link>https://dengshuanglin.github.io/develop/</link>
+    <description>Recent content in Develops on 双林不是双休</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Jul 2021 20:48:33 +0800</lastBuildDate><atom:link href="https://dengshuanglin.github.io/develop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>back-end First</title>
+      <link>https://dengshuanglin.github.io/develop/back-end/first/</link>
+      <pubDate>Sat, 31 Jul 2021 20:48:33 +0800</pubDate>
+      
+      <guid>https://dengshuanglin.github.io/develop/back-end/first/</guid>
+      <description>back-end First</description>
+    </item>
+    
+    <item>
+      <title>back-end second</title>
+      <link>https://dengshuanglin.github.io/develop/back-end/second/</link>
+      <pubDate>Sat, 31 Jul 2021 20:48:33 +0800</pubDate>
+      
+      <guid>https://dengshuanglin.github.io/develop/back-end/second/</guid>
+      <description>back-end second</description>
+    </item>
+    
+    <item>
+      <title>front-end First</title>
+      <link>https://dengshuanglin.github.io/develop/front-end/first/</link>
+      <pubDate>Sat, 31 Jul 2021 20:48:33 +0800</pubDate>
+      
+      <guid>https://dengshuanglin.github.io/develop/front-end/first/</guid>
+      <description>front-end First</description>
+    </item>
+    
+  </channel>
+</rss>
