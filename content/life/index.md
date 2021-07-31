@@ -6,4 +6,4 @@ tags:
   - 
 ---
 
-Life page
+life page

@@ -25,7 +25,6 @@ jobs:
           # 设置时区为 UTC+8 否则生成网站的时间可能是世界协调时
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
-          hugo --minify
 
       - name: Build
         run: hugo --minify
