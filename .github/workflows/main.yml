@@ -27,6 +27,7 @@ jobs:
           sudo timedatectl set-timezone Asia/Shanghai
 
       - name: Build
+        # Front Matter中draft为true的文章不会进行打包
         run: hugo --minify
 
       - name: Deploy
